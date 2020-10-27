@@ -9,7 +9,7 @@ tagger = CRFTagger()  # initialize tagger
 tagger.set_model_file(TAGGER_PATH)
 
 os.getcwd()
-os.chdir('/home/student/deep_disfluency-master')
+os.chdir('/home/bbb/dev/mozzam/deep_dislfuency')
 
 try:
     import deep_disfluency
@@ -29,9 +29,9 @@ tags repair structure incrementally and other edit terms <e/>
 """
 print (MESSAGE)
 disf = DeepDisfluencyTagger(
-    config_file="/home/student/deep_disfluency-master/deep_disfluency/experiments/experiment_configs.csv",
+    config_file="/home/bbb/dev/mozzam/deep_dislfuency/deep_disfluency/experiments/experiment_configs.csv",
     config_number=21,
-    saved_model_dir="/home/student/deep_disfluency-master/deep_disfluency/experiments/021/epoch_40"
+    saved_model_dir="/home/bbb/dev/mozzam/deep_dislfuency/deep_disfluency/experiments/021/epoch_40"
     )
 
 with open('raw_asr_text.txt', 'r') as file:
