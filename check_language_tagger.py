@@ -37,6 +37,7 @@ disf = DeepDisfluencyTagger(
 with open('/home/bbb/dev/mozzam/raw_asr_text.txt', 'r') as file:
     sentence = file.read()
 
+sentence = sentence.replace('<UNK>', '')  # removing <UNK> added by KALDI
 
 
 with_pos = True
