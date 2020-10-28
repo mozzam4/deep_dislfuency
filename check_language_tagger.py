@@ -34,7 +34,7 @@ disf = DeepDisfluencyTagger(
     saved_model_dir="/home/bbb/dev/mozzam/deep_dislfuency/deep_disfluency/experiments/021/epoch_40"
     )
 
-with open('raw_asr_text.txt', 'r') as file:
+with open('/home/bbb/dev/mozzam/raw_asr_text.txt', 'r') as file:
     sentence = file.read()
 
 
