@@ -34,7 +34,7 @@ disf = DeepDisfluencyTagger(
     saved_model_dir="/home/bbb/dev/mozzam/deep_dislfuency/deep_disfluency/experiments/021/epoch_40"
     )
 
-with open('/home/bbb/dev/mozzam/raw_asr_text.txt', 'r') as file:
+with open('/home/bbb/dev/mozzam/interm_files/raw_asr_text.txt', 'r') as file:
     sentence = file.read()
 
 sentence = sentence.replace('<UNK>', '')  # removing <UNK> added by KALDI
@@ -81,6 +81,6 @@ for w, t in zip(sentence.split(), disf.output_tags):
             final_str = final_str + ' ' + w
 
 disf.reset()  # resets the whole tagger for new utterance
-with open("text_without_disfluency.txt", "w") as text_file:
+with open("/home/bbb/dev/mozzam/interm_files/text_without_disfluency.txt", "w") as text_file:
     text_file.write(final_str)
 
